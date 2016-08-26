@@ -11,7 +11,7 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.cr00keddesigns.calculator.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:background="#1eb687"
+    android:background="@android:color/holo_blue_light"
     android:weightSum="1"
     android:nestedScrollingEnabled="false"
     android:orientation="vertical">
@@ -28,26 +28,25 @@
     <EditText
         android:layout_width="201dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/edit_operand1"
-        android:layout_gravity="center_horizontal" />
-
-    <EditText
-        android:layout_width="201dp"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/edit_operand2"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp" />
+        android:hint="0" />
+
+    <!--<EditText-->
+        <!--android:layout_width="201dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:inputType="numberDecimal"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/edit_operand2"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="25dp" />-->
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="#1a5f4a">
+        android:layout_gravity="center_horizontal">
 
         <Button
             android:layout_width="60dp"
@@ -66,86 +65,16 @@
         <Button
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="/"
-            android:id="@+id/btnDivision"
-            style="?android:attr/buttonStyleSmall"/>
-
-        <Button
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
             android:text="*"
             android:id="@+id/btnMultip"
-            style="?android:attr/buttonStyleSmall"/>
-
-        <Button
-            android:text="%"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnModulo"
-            android:layout_weight="1"
-            style="@android:style/Widget.Material.Light.Button" />
+            style="?android:attr/buttonStyleSmall" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:text="CLR"
-            android:id="@+id/btnClear" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:text="1"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn1"
-            android:layout_weight="1" />
-
-        <Button
-            android:text="2"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn2"
-            android:layout_weight="1" />
-
-        <Button
-            android:text="3"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn3"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:text="4"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn4"
-            android:layout_weight="1" />
-
-        <Button
-            android:text="5"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn5"
-            android:layout_weight="1" />
-
-        <Button
-            android:text="6"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn6"
+            android:id="@+id/btnClear"
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -154,27 +83,141 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="0.12">
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:text="1"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn1"
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
+
+        <Button
+            android:text="2"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn2"
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
+
+        <Button
+            android:text="3"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn3"
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
+
+        <Button
+            android:text="%"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnModulo"
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:text="4"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn4"
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
+
+        <Button
+            android:text="5"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn5"
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
+
+        <Button
+            android:text="6"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn6"
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:id="@+id/btnDivision"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
 
         <Button
             android:text="7"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn7"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
 
         <Button
             android:text="8"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn8"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
 
         <Button
             android:text="9"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:id="@+id/btn9"
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
+
+        <Button
+            android:text="."
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPeriod"
+            android:layout_weight="1"
+            style="?android:attr/buttonStyleSmall"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:text="0"
+            android:layout_width="100dp"
+            android:id="@+id/btn0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            style="?android:attr/buttonStyleSmall"/>
+
+        <Button
+            android:text="Mathulate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMathulate"
             android:layout_weight="1" />
     </LinearLayout>
 

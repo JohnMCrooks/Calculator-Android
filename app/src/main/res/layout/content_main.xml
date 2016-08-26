@@ -28,19 +28,19 @@
     <EditText
         android:layout_width="201dp"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/edit_operand1"
-        android:layout_gravity="center_horizontal" />
-
-    <EditText
-        android:layout_width="201dp"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/edit_operand2"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp" />
+        android:hint="0" />
+
+    <!--<EditText-->
+        <!--android:layout_width="201dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:inputType="numberDecimal"-->
+        <!--android:ems="10"-->
+        <!--android:id="@+id/edit_operand2"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="25dp" />-->
 
     <LinearLayout
         android:orientation="horizontal"
@@ -212,6 +212,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             style="?android:attr/buttonStyleSmall"/>
+
+        <Button
+            android:text="Mathulate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnMathulate"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <TextView
