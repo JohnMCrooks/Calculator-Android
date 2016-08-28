@@ -16,22 +16,48 @@
     android:nestedScrollingEnabled="false"
     android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Enter 2 numbers:"
-        android:id="@+id/textView"
-        android:gravity="center"
-        android:layout_weight="0.12" />
-
-    <EditText
-        android:layout_width="201dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/edit_operand1"
         android:layout_gravity="center_horizontal"
-        android:hint="0" />
+        android:layout_weight="0.64"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Results"
+            android:id="@+id/textView2"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0.00"
+            android:id="@+id/txtResult"
+            android:layout_weight=".5"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:gravity="center" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:id="@+id/edit_operand1"
+            android:hint="0"
+            android:layout_weight=".25"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:maxLines="2"
+            android:textAlignment="textEnd" />
+    </LinearLayout>
 
     <!--<EditText-->
         <!--android:layout_width="201dp"-->
@@ -47,6 +73,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="CLR"
+            android:id="@+id/btnClear"
+            android:layout_weight="1" />
 
         <Button
             android:layout_width="60dp"
@@ -68,14 +102,6 @@
             android:text="*"
             android:id="@+id/btnMultip"
             style="?android:attr/buttonStyleSmall" />
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="60dp"
-            android:layout_height="wrap_content"
-            android:text="CLR"
-            android:id="@+id/btnClear"
-            android:layout_weight="1" />
 
     </LinearLayout>
 
@@ -203,6 +229,7 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:elevation="0dp"
         android:layout_gravity="center_horizontal">
 
         <Button
@@ -219,26 +246,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btnMathulate"
             android:layout_weight="1" />
+
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="The Result"
-        android:id="@+id/textView2"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="0.00"
-        android:id="@+id/txtResult"
-        android:layout_weight="0.12"
-        android:singleLine="true"
-        android:textAlignment="center"
-        android:gravity="center" />
 
 </LinearLayout>

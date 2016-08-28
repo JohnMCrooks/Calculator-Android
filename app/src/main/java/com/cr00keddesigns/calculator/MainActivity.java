@@ -75,12 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 if (!operand1.equals(null)){
                     double result = eval(operand1.getText().toString());
                     txtResult.setText(Double.toString(result));
-
-                    //TODO for the sake of remembering... http://stackoverflow.com/questions/3422673/evaluating-a-math-expression-given-in-string-form
                 }
             }
         });
-
 
 
         btnClear.setOnClickListener(new View.OnClickListener() {
