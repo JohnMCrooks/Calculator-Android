@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         //on click listener allows us to click the button and cause an action to occur
 
+        //When clicked, This will verify and evaluate the user input.
         btnMathulate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        //Clearing the user input and te text result field.
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -216,24 +217,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void checkLast(String last, EditText operand1, TextView txtResult){
-        System.out.println(last);
-        System.out.println(operand1.getText().toString());
-
+        //If the last character is an operand, remove it and re-run the check.
         if(last.equals("-") || last.equals("+") ||last.equals("/") || last.equals("*")) {
             operand1.setText(operand1.getText().toString().substring(0,operand1.length()-1));
             last = String.valueOf(operand1.getText().charAt(operand1.length()-1));
-            System.out.println(operand1.getText().toString() + " Updated");
             checkLast(last, operand1, txtResult);
-            double result = eval(operand1.getText().toString());
-            txtResult.setText(Double.toString(result));
         } else {
-            System.out.println(eval(operand1.getText().toString()));
+            //If all is good, evaluate the input.
             double result = eval(operand1.getText().toString());
             txtResult.setText(Double.toString(result));
         }
     }
 
-/* The Evaluation Code below was found on Stack Overflow originally posted by User Boann.
+/* The Evaluation Code below was found on Stack Overflow originally posted by User 'Boann'.
 Thread: http://stackoverflow.com/questions/3422673/evaluating-a-math-expression-given-in-string-form     */
     public static double eval(final String str) {
         return new Object() {
