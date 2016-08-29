@@ -80,16 +80,16 @@
         "source": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_tab_text.xml"
     },
     {
-        "merged": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
-        "source": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar.xml"
+        "merged": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
+        "source": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
     },
     {
         "merged": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_layout.xml",
         "source": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_layout.xml"
     },
     {
-        "merged": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_radio.xml",
-        "source": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_list_menu_item_radio.xml"
+        "merged": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/res/merged/debug/layout/design_layout_snackbar.xml",
+        "source": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/res/layout/design_layout_snackbar.xml"
     },
     {
         "merged": "/Users/johncrooks/AndroidStudioProjects/Calculator/app/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",

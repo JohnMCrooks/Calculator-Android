@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.regex.*;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -73,11 +74,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (!operand1.equals(null)){
-                    double result = eval(operand1.getText().toString());
-                    txtResult.setText(Double.toString(result));
+                    if (operand1.length()>1) {
+                        //verify the last character isn't an operator so that the equation can be evaluated properly.
+                        String last = String.valueOf(operand1.getText().charAt(operand1.length() - 1));
+                        checkLast(last, operand1, txtResult);
+                    }else{
+                        Toast.makeText(MainActivity.this, "That's a nice digit, what would you like to do with it?", Toast.LENGTH_SHORT).show();
+                    }
+                } else{
+                    Toast.makeText(MainActivity.this, "You won't get very far doing that...", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
+
 
 
         btnClear.setOnClickListener(new View.OnClickListener() {
@@ -87,9 +97,9 @@ public class MainActivity extends AppCompatActivity {
                     txtResult.setText("");
                     operand1.setText("");
                     operand1.requestFocus();
-                    Toast.makeText(MainActivity.this, "Numbers have been Cleared.", Toast.LENGTH_LONG);
+                    Toast.makeText(MainActivity.this, "Clear!", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(MainActivity.this, "There is nothing to clear!", Toast.LENGTH_LONG);
+                    Toast.makeText(MainActivity.this, "There is nothing to clear!", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -203,6 +213,24 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+    }
+
+    public static void checkLast(String last, EditText operand1, TextView txtResult){
+        System.out.println(last);
+        System.out.println(operand1.getText().toString());
+
+        if(last.equals("-") || last.equals("+") ||last.equals("/") || last.equals("*")) {
+            operand1.setText(operand1.getText().toString().substring(0,operand1.length()-1));
+            last = String.valueOf(operand1.getText().charAt(operand1.length()-1));
+            System.out.println(operand1.getText().toString() + " Updated");
+            checkLast(last, operand1, txtResult);
+            double result = eval(operand1.getText().toString());
+            txtResult.setText(Double.toString(result));
+        } else {
+            System.out.println(eval(operand1.getText().toString()));
+            double result = eval(operand1.getText().toString());
+            txtResult.setText(Double.toString(result));
+        }
     }
 
 /* The Evaluation Code below was found on Stack Overflow originally posted by User Boann.

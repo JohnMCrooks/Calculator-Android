@@ -38,7 +38,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="0.00"
             android:id="@+id/txtResult"
-            android:layout_weight=".5"
+            android:layout_weight=".40"
             android:singleLine="true"
             android:textAlignment="center"
             android:gravity="center" />
