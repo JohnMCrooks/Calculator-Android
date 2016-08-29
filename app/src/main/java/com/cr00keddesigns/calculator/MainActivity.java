@@ -15,6 +15,7 @@ import java.util.regex.*;
 public class MainActivity extends AppCompatActivity {
 
     private TextView txtResult;
+    private TextView textView3;
 
     private EditText operand1;
 
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         btn7 = (Button) findViewById(R.id.btn7);
         btn8 = (Button) findViewById(R.id.btn8);
         btn9 = (Button) findViewById(R.id.btn9);
-
+        textView3 = (TextView) findViewById(R.id.textView3);
         txtResult = (TextView) findViewById(R.id.txtResult);
 
         //on click listener allows us to click the button and cause an action to occur
@@ -78,7 +79,8 @@ public class MainActivity extends AppCompatActivity {
                     if (operand1.length()>1) {
                         //verify the last character isn't an operator so that the equation can be evaluated properly.
                         String last = String.valueOf(operand1.getText().charAt(operand1.length() - 1));
-                        checkLast(last, operand1, txtResult);
+                        textView3.append(("\n" + (checkLast(last, operand1, txtResult).getText().toString()) + " = " + txtResult.getText().toString()));
+
                     }else{
                         Toast.makeText(MainActivity.this, "That's a nice digit, what would you like to do with it?", Toast.LENGTH_SHORT).show();
                     }
@@ -216,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public static void checkLast(String last, EditText operand1, TextView txtResult){
+    public static EditText checkLast(String last, EditText operand1, TextView txtResult){
         //If the last character is an operand, remove it and re-run the check.
         if(last.equals("-") || last.equals("+") ||last.equals("/") || last.equals("*")) {
             operand1.setText(operand1.getText().toString().substring(0,operand1.length()-1));
@@ -227,6 +229,7 @@ public class MainActivity extends AppCompatActivity {
             double result = eval(operand1.getText().toString());
             txtResult.setText(Double.toString(result));
         }
+        return operand1;
     }
 
 /* The Evaluation Code below was found on Stack Overflow originally posted by User 'Boann'.
