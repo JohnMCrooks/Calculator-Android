@@ -35,7 +35,6 @@
             android:scrollbars="vertical"
             android:editable="false"
             android:fadeScrollbars="false"
-            android:maxLines="5"
             android:minLines="1"
             android:scrollY="300dp"
             android:scrollbarSize="12dp" />

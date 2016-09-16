@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Links objects created above to layout fields in the XML file
         operand1 = (EditText) findViewById(R.id.edit_operand1);
-//        operand2 = (EditText) findViewById(R.id.edit_operand2);
 
         btnAddition = (Button) findViewById(R.id.btnAddition);
         btnDivision = (Button) findViewById(R.id.btnDivision);
@@ -69,17 +68,18 @@ public class MainActivity extends AppCompatActivity {
         textView3 = (TextView) findViewById(R.id.textView3);
         txtResult = (TextView) findViewById(R.id.txtResult);
 
-        //on click listener allows us to click the button and cause an action to occur
-
         //When clicked, This will verify and evaluate the user input.
         btnMathulate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!operand1.equals(null)){
                     if (operand1.length()>1) {
+
                         //verify the last character isn't an operator so that the equation can be evaluated properly.
                         String last = String.valueOf(operand1.getText().charAt(operand1.length() - 1));
-                        textView3.append(("\n" + (checkLast(last, operand1, txtResult).getText().toString()) + " = " + txtResult.getText().toString()));
+                        //textView3.append(("\n" + (checkLast(last, operand1, txtResult).getText().toString()) + " = " + txtResult.getText().toString()));
+                        String tickertape = ((checkLast(last, operand1, txtResult).getText().toString()) + " = " + txtResult.getText().toString() +  "\n" + textView3.getText().toString());
+                        textView3.setText(tickertape);
 
                     }else{
                         Toast.makeText(MainActivity.this, "That's a nice digit, what would you like to do with it?", Toast.LENGTH_SHORT).show();
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        //Clearing the user input and te text result field.
+        //Clearing the user input and the text result field.
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
