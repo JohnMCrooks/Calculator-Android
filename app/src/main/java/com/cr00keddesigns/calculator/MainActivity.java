@@ -77,7 +77,6 @@ public class MainActivity extends AppCompatActivity {
 
                         //verify the last character isn't an operator so that the equation can be evaluated properly.
                         String last = String.valueOf(operand1.getText().charAt(operand1.length() - 1));
-                        //textView3.append(("\n" + (checkLast(last, operand1, txtResult).getText().toString()) + " = " + txtResult.getText().toString()));
                         String tickertape = ((checkLast(last, operand1, txtResult).getText().toString()) + " = " + txtResult.getText().toString() +  "\n" + textView3.getText().toString());
                         textView3.setText(tickertape);
 
