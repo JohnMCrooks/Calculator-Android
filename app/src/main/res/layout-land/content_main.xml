@@ -24,6 +24,17 @@
         android:weightSum="1"
         android:gravity="bottom">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="0.00"
+            android:id="@+id/txtResult"
+            android:layout_weight="0.11"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:gravity="center" />
+
         <EditText
             android:layout_width="229dp"
             android:layout_height="37dp"
