@@ -14,53 +14,19 @@
     android:background="@android:color/holo_blue_light"
     android:weightSum="1"
     android:nestedScrollingEnabled="false"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="270dp"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.64"
         android:weightSum="1"
         android:gravity="bottom">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:background="#7ca7ae"
-            android:layout_weight="0.54"
-            android:editable="false"
-            android:fadeScrollbars="false"
-            android:minLines="1"
-            android:scrollY="300dp"
-            android:scrollbarSize="12dp"
-            android:layout_width="275dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_height="75dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Results"
-            android:id="@+id/textView2"
-            android:gravity="center"
-            android:layout_marginTop="15dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="0.00"
-            android:id="@+id/txtResult"
-            android:layout_weight="0.11"
-            android:singleLine="true"
-            android:textAlignment="center"
-            android:gravity="center" />
-
         <EditText
             android:layout_width="229dp"
-            android:layout_height="wrap_content"
+            android:layout_height="37dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/edit_operand1"
@@ -69,7 +35,19 @@
             android:paddingRight="20dp"
             android:background="@android:color/holo_blue_dark"
             android:hint="0"
-            android:layout_weight="0.12" />
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:background="#7ca7ae"
+            android:editable="false"
+            android:fadeScrollbars="false"
+            android:minLines="1"
+            android:scrollY="300dp"
+            android:scrollbarSize="12dp"
+            android:layout_width="275dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="225dp" />
 
     </LinearLayout>
 
@@ -84,16 +62,18 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_width="241dp"
+        android:layout_height="270dp"
+        android:gravity="left"
+        android:layout_gravity="left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:layout_gravity="center_horizontal">
+            android:gravity="bottom">
 
             <Button
                 style="?android:attr/buttonStyleSmall"
@@ -130,8 +110,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:layout_gravity="center_horizontal">
+            android:gravity="bottom">
 
             <Button
                 android:text="1"
@@ -171,8 +150,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:layout_gravity="center_horizontal">
+            android:gravity="bottom">
 
             <Button
                 android:text="4"
@@ -200,7 +178,7 @@
 
             <Button
                 android:layout_width="60dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="/"
                 android:id="@+id/btnDivision"
                 style="?android:attr/buttonStyleSmall"
@@ -212,8 +190,7 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:layout_gravity="center_horizontal">
+            android:gravity="bottom">
 
             <Button
                 android:text="7"
@@ -255,7 +232,7 @@
             android:layout_height="wrap_content"
             android:elevation="0dp"
             android:gravity="bottom"
-            android:layout_gravity="center_horizontal">
+            android:layout_marginLeft="20dp">
 
             <Button
                 android:text="0"

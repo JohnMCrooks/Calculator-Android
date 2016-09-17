@@ -201,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
         btnModulo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                operand1.append("%");
+                operand1.append("^");
             }
         });
 
